@@ -22,11 +22,6 @@ jobs:
         
       - name: Build
         run: npm run build
-
-      - name: Copy robots.txt and sitemap.xml
-        run: |
-          cp ../../src/assets/robots.txt dist/
-          cp ../../src/assets/sitemap.xml dist/
         
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
