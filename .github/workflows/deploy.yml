@@ -22,6 +22,12 @@ jobs:
         
       - name: Build
         run: npm run build
+
+      - name: Copy static content
+        run: |
+          cp src/assets/robots.txt dist/
+          cp src/assets/sitemap.xml dist/
+          cp src/assets/googleadf67752f1ed5085.html dist/
         
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
